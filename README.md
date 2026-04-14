@@ -13,7 +13,7 @@ Thanks to BuzzHeavier for free file hosting.
 - Bundled Python runtime in `runtime\python311`.
 - Bundled FFmpeg runtime in `tools\ffmpeg`.
 - Preloaded caches and portable paths so the app can run without a separate install.
-- The ready-made frontend is bundled from the archive's `frontend\` workspace, which already contains the built UI, npm dependencies, and assets used by this portable package.
+- The ready-made frontend was taken from `https://github.com/debpalash/OmniVoice-Studio` and packaged into the archive as a bundled `frontend\` workspace with the built UI, npm dependencies, and assets used by this portable package.
 
 ## Requirements
 

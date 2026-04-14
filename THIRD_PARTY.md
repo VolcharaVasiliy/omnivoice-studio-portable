@@ -8,6 +8,7 @@ This portable build is assembled from the OmniVoice source tree plus the runtime
 | --- | --- | --- |
 | OmniVoice | https://github.com/k2-fsa/OmniVoice | Core TTS model, CLI tools, docs, and source code. |
 | OmniVoice model | https://huggingface.co/k2-fsa/OmniVoice | Pretrained weights used by the portable build. |
+| OmniVoice Studio frontend | https://github.com/debpalash/OmniVoice-Studio | Ready-made frontend source used as the bundled portable UI. |
 
 ## Runtime and UI Stack
 
@@ -53,4 +54,3 @@ These packages are referenced by the OmniVoice source tree for evaluation or ext
 | --- | --- | --- |
 | uv | https://docs.astral.sh/uv/ | Dependency and lockfile workflow in the source tree. |
 | hatchling | https://hatch.pypa.io/ | Build backend declared in `pyproject.toml`. |
-
