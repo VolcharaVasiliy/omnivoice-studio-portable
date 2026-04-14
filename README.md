@@ -13,6 +13,7 @@ Thanks to BuzzHeavier for free file hosting.
 - Bundled Python runtime in `runtime\python311`.
 - Bundled FFmpeg runtime in `tools\ffmpeg`.
 - Preloaded caches and portable paths so the app can run without a separate install.
+- The ready-made frontend is bundled from the archive's `frontend\` workspace, which already contains the built UI, npm dependencies, and assets used by this portable package.
 
 ## Requirements
 
@@ -47,6 +48,7 @@ The `.cmd` wrappers call the PowerShell entry points:
 - Video dubbing is not included in this portable build.
 - Windows users do not need any extra installer beyond the archive itself.
 - If your GPU is not CUDA-capable, the app still runs, but generation will be slower.
+- The portable UI is launched from the bundled `frontend\src\App.jsx` / `frontend\src\main.jsx` workspace and then served by the local Python backend.
 
 ## Portable Layout
 
@@ -60,4 +62,3 @@ The `.cmd` wrappers call the PowerShell entry points:
 ## Credits
 
 All third-party projects used here are listed in [THIRD_PARTY.md](THIRD_PARTY.md).
-
