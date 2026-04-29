@@ -1,56 +1,48 @@
 # Third-Party Credits
 
-This portable build is assembled from the OmniVoice source tree plus the runtime and UI stack listed below.
+This project is a portable OmniVoice-based app built from upstream model,
+UI, and runtime components. See the upstream projects below for their
+respective licenses and usage terms.
 
-## Core Project
+## Core References
 
-| Project | Link | Use |
+| Project | Link | Used For |
 | --- | --- | --- |
-| OmniVoice | https://github.com/k2-fsa/OmniVoice | Core TTS model, CLI tools, docs, and source code. |
-| OmniVoice model | https://huggingface.co/k2-fsa/OmniVoice | Pretrained weights used by the portable build. |
-| OmniVoice Studio frontend | https://github.com/debpalash/OmniVoice-Studio | Ready-made frontend source used as the bundled portable UI. |
+| OmniVoice | https://github.com/k2-fsa/OmniVoice | Core TTS model and generation behavior. |
+| OmniVoice model | https://huggingface.co/k2-fsa/OmniVoice | Pretrained model weights used by the backend. |
+| OmniVoice HF Space | https://huggingface.co/spaces/k2-fsa/OmniVoice | Behavioral reference for the clone/design flow and output style. |
+| OmniVoice Studio | https://github.com/debpalash/OmniVoice-Studio | Frontend and layout inspiration for the studio-style UI. |
+| Whisper | https://github.com/openai/whisper | Local speech transcription fallback for reference audio. |
 
-## Runtime and UI Stack
+## Runtime and Build Stack
 
-| Project | Link | Use |
+| Project | Link | Used For |
 | --- | --- | --- |
-| Python | https://www.python.org/ | Bundled runtime in `runtime\python311`. |
-| PyTorch | https://pytorch.org/ | Main inference runtime. |
-| torchaudio | https://github.com/pytorch/audio | Audio I/O and signal utilities. |
-| Transformers | https://huggingface.co/docs/transformers | Model loading and generation helpers. |
-| Accelerate | https://huggingface.co/docs/accelerate | Device and runtime orchestration. |
-| Gradio | https://www.gradio.app/ | Studio UI layer. |
-| FastAPI | https://fastapi.tiangolo.com/ | Backend HTTP API. |
-| psutil | https://github.com/giampaolo/psutil | Process and system checks. |
+| Python | https://www.python.org/ | Bundled backend runtime. |
+| FastAPI | https://fastapi.tiangolo.com/ | HTTP API layer. |
+| Uvicorn | https://www.uvicorn.org/ | ASGI server. |
+| PyTorch | https://pytorch.org/ | Model inference runtime. |
+| torchaudio | https://github.com/pytorch/audio | Audio I/O helpers. |
+| Transformers | https://huggingface.co/docs/transformers | Model loading utilities. |
+| Accelerate | https://huggingface.co/docs/accelerate | Device orchestration. |
+| soundfile | https://python-soundfile.readthedocs.io/ | WAV output writing. |
+| NumPy | https://numpy.org/ | Audio array handling. |
+| React | https://react.dev/ | Frontend framework. |
+| Vite | https://vite.dev/ | Frontend build and dev tooling. |
+| Lucide | https://lucide.dev/ | UI icons. |
 
-## Audio and Data Helpers
+## Portable Binary Dependencies
 
-| Project | Link | Use |
+| Project | Link | Used For |
 | --- | --- | --- |
-| FFmpeg | https://ffmpeg.org/ | Bundled audio conversion runtime. |
-| pydub | https://github.com/jiaaro/pydub | Audio manipulation helpers. |
-| soundfile | https://python-soundfile.readthedocs.io/ | WAV and audio file handling. |
-| NumPy | https://numpy.org/ | Numerical operations. |
-| tensorboardX | https://github.com/lanpa/tensorboardX | Training and logging utilities. |
-| WebDataset | https://github.com/webdataset/webdataset | Dataset pipeline support. |
+| ffmpeg | https://ffmpeg.org/ | Local audio conversion and media helpers. |
+| Gyan.dev FFmpeg builds | https://www.gyan.dev/ffmpeg/builds/ | Portable Windows ffmpeg binaries used in the package. |
 
-## Optional Evaluation Stack in the Source Tree
+## Notes
 
-These packages are referenced by the OmniVoice source tree for evaluation or extended workflows and are not required for the basic portable UI path.
-
-| Project | Link | Use |
-| --- | --- | --- |
-| jiwer | https://github.com/jitsi/jiwer | WER evaluation. |
-| librosa | https://librosa.org/ | Audio processing. |
-| s3prl | https://github.com/s3prl/s3prl | Speech representation models. |
-| FunASR | https://github.com/modelscope/FunASR | ASR support for evaluation workflows. |
-| zhconv | https://github.com/gumblex/zhconv | Chinese character normalization. |
-| zhon | https://github.com/tsroten/zhon | Chinese punctuation helpers. |
-| Unidecode | https://github.com/avian2/unidecode | Unicode normalization helpers. |
-
-## Packaging and Portability
-
-| Project | Link | Use |
-| --- | --- | --- |
-| uv | https://docs.astral.sh/uv/ | Dependency and lockfile workflow in the source tree. |
-| hatchling | https://hatch.pypa.io/ | Build backend declared in `pyproject.toml`. |
+- The packaged archive includes the local Python runtime, ffmpeg binaries, and
+  cached OmniVoice/Whisper assets.
+- This repository does not redistribute upstream model licenses; check each
+  source project before redistributing.
+- If you update the model, UI, or runtime stack, add the new upstream project
+  here as well.
