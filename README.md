@@ -1,64 +1,98 @@
 # OmniVoice Studio Portable
 
-Portable Windows package for OmniVoice Studio, built from open-source components and bundled so it runs out of the box after extraction.
+Portable OmniVoice Studio-style app for local voice cloning and voice design.
+It is built to be extracted into any folder and launched with one double-click.
 
-[Download the archive on BuzzHeavier](https://buzzheavier.com/4g92h9spsvue)
+## Quick Start
 
-Thanks to BuzzHeavier for free file hosting.
+1. Download the release archive or clone this repo.
+2. Extract it anywhere you want.
+3. Double-click `start.bat`.
+4. Wait for the first model load to finish.
+5. The browser opens automatically at `http://127.0.0.1:8000`.
 
-## What This Build Includes
+## What You Get
 
-- Local Studio-style web UI for voice clone and voice design.
-- FastAPI backend in `studio_api.py`.
-- Bundled Python runtime in `runtime\python311`.
-- Bundled FFmpeg runtime in `tools\ffmpeg`.
-- Preloaded caches and portable paths so the app can run without a separate install.
-- The ready-made frontend was taken from `https://github.com/debpalash/OmniVoice-Studio` and packaged into the archive as a bundled `frontend\` workspace with the built UI, npm dependencies, and assets used by this portable package.
-
-## Requirements
-
-- Windows 10 or Windows 11.
-- A writable local drive for extraction.
-- NVIDIA CUDA is recommended for best performance.
-- AMD GPUs and CPU fallback are supported, but slower.
-
-## How To Run
-
-1. Extract the archive to a local folder on Windows.
-2. Start the app with `start-ui.cmd`.
-3. Open the local UI at `http://127.0.0.1:8000`.
-4. Stop it with `stop-ui.cmd`.
-
-The `.cmd` wrappers call the PowerShell entry points:
-
-- `start-ui.cmd` -> `start-ui.ps1`
-- `stop-ui.cmd` -> `stop-ui.ps1`
-
-## How It Works
-
-1. `start-ui.cmd` launches the portable runtime.
-2. On first launch, `repair-runtime.ps1` rewrites runtime-local paths so the bundled environment works from its new location.
-3. `studio_api.py` starts the backend API and serves the bundled frontend.
-4. `studio_app.py` provides the Gradio-based studio interface.
-5. Generated audio is written to `out\`, while reference inputs are stored under `input\profiles\`.
-
-## Notes
-
-- This package is focused on voice clone and voice design workflows.
-- Video dubbing is not included in this portable build.
-- Windows users do not need any extra installer beyond the archive itself.
-- If your GPU is not CUDA-capable, the app still runs, but generation will be slower.
-- The portable UI is launched from the bundled `frontend\src\App.jsx` / `frontend\src\main.jsx` workspace and then served by the local Python backend.
+- FastAPI backend that serves OmniVoice synthesis.
+- React + Vite frontend inspired by OmniVoice Studio and the Hugging Face demo flow.
+- Local Whisper transcription for reference audio.
+- Local portable ffmpeg binaries.
+- Local Python runtime inside the app folder.
 
 ## Portable Layout
 
-- `input\profiles` - reference audio for saved voice profiles
-- `out` - generated WAV files
-- `cache` - local model and framework caches
-- `frontend` - the bundled frontend source and build output
-- `runtime\python311` - portable Python runtime
-- `tools\ffmpeg` - bundled FFmpeg binaries
+Everything lives next to the app, not in a fixed drive location:
 
-## Credits
+- `runtime\` - bundled Python and virtual environment
+- `cache\` - Hugging Face, Whisper, and other model caches
+- `tools\ffmpeg\` - portable ffmpeg and ffprobe
+- `data\` - generated audio and uploaded reference clips
 
-All third-party projects used here are listed in [THIRD_PARTY.md](THIRD_PARTY.md).
+This means you can unpack the app into any directory and run it without
+changing paths manually.
+
+## GPU and CPU Behavior
+
+The launcher detects NVIDIA hardware and installs a CUDA-enabled PyTorch build
+when available. On NVIDIA systems, OmniVoice runs on GPU automatically.
+
+If no supported GPU is available, the app falls back to CPU mode instead of
+failing.
+
+## First Launch
+
+The first run downloads OmniVoice weights and any missing model assets into the
+local `cache\` folder. That can take a while, especially on the first launch.
+Later launches reuse the local cache.
+
+## Scripts
+
+- `start.bat` - one-click launcher for end users.
+- `start.ps1` - starts the backend, waits for health, then opens the browser.
+- `stop.ps1` - stops the backend and clears stale listeners on port `8000`.
+- `setup-portable.ps1` - bootstrap script for building or refreshing the local runtime.
+- `package-portable.ps1` - creates the distributable `.7z` archive.
+
+## Build From Source
+
+If you are rebuilding the portable package on a maintainer machine, you can
+override helper tool locations with environment variables:
+
+- `OMNIVOICE_PYTHON_SOURCE`
+- `OMNIVOICE_NODE_HOME`
+- `OMNIVOICE_SEVENZIP`
+
+Example:
+
+```powershell
+$env:OMNIVOICE_PYTHON_SOURCE = 'F:\DevTools\Python311'
+$env:OMNIVOICE_NODE_HOME = 'F:\DevTools\Portable\NodeJS'
+powershell -NoProfile -ExecutionPolicy Bypass -File .\setup-portable.ps1
+```
+
+## Environment Variables
+
+Useful runtime variables:
+
+- `OMNIVOICE_MODEL` - model repo or checkpoint, defaults to `k2-fsa/OmniVoice`
+- `OMNIVOICE_ASR_MODEL` - ASR model used for reference transcription
+- `OMNIVOICE_DATA_DIR` - base folder for uploads and generated files
+- `OMNIVOICE_OUTPUT_DIR` - generated audio folder
+- `OMNIVOICE_UPLOAD_DIR` - uploaded reference audio folder
+- `OMNIVOICE_CACHE_DIR` - local cache root
+
+## Notes
+
+- Clone mode accepts a reference clip and optional transcript.
+- Design mode uses the voice-attribute grammar from the HF demo style flow.
+- Auto mode generates without clone or instruction prompts.
+- The UI, backend, and caches are all relative to the extracted folder.
+
+## Troubleshooting
+
+- If the browser does not open, run `start.ps1` manually and check the logs in
+  `runtime\backend.err.log`.
+- If port `8000` is busy, `stop.ps1` clears the stale process and you can start
+  again.
+- If first launch is slow, it is usually model download or cache warmup, not a
+  broken install.
