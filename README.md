@@ -12,7 +12,7 @@ Latest release download:
 Thanks to Buzzheavier for free hosting of large files.
 For faster downloads without interruptions or ads, the releases may also
 include `BuzzheavierTool.exe` as a companion downloader for Buzzheavier-hosted
-files.
+files. To download through my tools you can insert the ID `70thdyvpbzh1`.
 
 ## Quick Start
 
