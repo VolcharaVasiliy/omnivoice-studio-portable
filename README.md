@@ -7,12 +7,12 @@ It is built to be extracted into any folder and launched with one double-click.
 
 Latest release download:
 
- [Buzzheavier mirror](https://buzzheavier.com/70thdyvpbzh1)
+ [Buzzheavier mirror](https://buzzheavier.com/n5kjzrbmgtx1)
 
 Thanks to Buzzheavier for free hosting of large files.
 For faster downloads without interruptions or ads, the releases may also
 include `BuzzheavierTool.exe` as a companion downloader for Buzzheavier-hosted
-files. To download through my tools you can insert the ID `70thdyvpbzh1`.
+files. To download through my tools you can insert the ID `n5kjzrbmgtx1`.
 
 ## Quick Start
 
