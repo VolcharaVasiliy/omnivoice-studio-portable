@@ -14,6 +14,15 @@ For faster downloads without interruptions or ads, the releases may also
 include `BuzzheavierTool.exe` as a companion downloader for Buzzheavier-hosted
 files. To download through my tools you can insert the ID `n5kjzrbmgtx1`.
 
+Alt Google Drive:
+
+[Google Drive 001](https://drive.google.com/file/d/1QQVv1HJour3Q2g3GuTF9qcYKflgFQWc8/view?usp=sharing)
+[Google Drive 002](https://drive.google.com/file/d/1cKZP_62tAlcL5AHjqYcnQSDOf4I_Ph30/view?usp=sharing)
+
+Split, because the file is too big for a free google drive, sorry :3
+But it will always be available, since buzz has a shelf life, and I don't always have time to upload the archive on time.
+You should have downloaded 7z, put both archives in the same folder, then run `7z x omnivoice-studio-portable-split.7z.001`.
+
 ## Quick Start
 
 1. Download the release archive or clone this repo.
