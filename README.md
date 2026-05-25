@@ -7,12 +7,15 @@ It is built to be extracted into any folder and launched with one double-click.
 
 Latest release download:
 
- [Buzzheavier mirror](https://buzzheavier.com/qhvr22lgxpvt)
+ [Buzzheavier mirror](https://buzzheavier.com/efzletm4etyp)
 
 Thanks to Buzzheavier for free hosting of large files.
 For faster downloads without interruptions or ads, the releases may also
 include `BuzzheavierTool.exe` as a companion downloader for Buzzheavier-hosted
-files. To download through my tools you can insert the ID `qhvr22lgxpvt`.
+files. To download through my tools you can insert the ID `efzletm4etyp`.
+
+As for my download script, If the download hasn't started and you see resolving, then don't worry, buzz just doesn't have an API download, but it's easy to bypass, but it's not very easy to bypass clogflare's protection.
+Use a clean IP, or go to the link directly and click `Colpy Link`, and then paste this link instead of the ID/link.
 
 Alt Google Drive:
 
