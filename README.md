@@ -15,7 +15,7 @@ include [BuzzheavierTool.exe](https://github.com/VolcharaVasiliy/omnivoice-studi
 files. To download through my tools you can insert the ID `efzletm4etyp`.
 
 As for my download script, If the download hasn't started and you see resolving, then don't worry, buzz just doesn't have an API download, but it's easy to bypass, but it's not very easy to bypass clogflare's protection.
-Use a clean IP, or go to the link directly and click `Colpy Link`, and then paste this link instead of the ID/link.
+Use a clean IP, or go to the link directly and click `Copy Link`, and then paste this link instead of the ID/link.
 
 Alt Google Drive:
 
