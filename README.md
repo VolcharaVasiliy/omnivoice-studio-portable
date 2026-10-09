@@ -3,6 +3,26 @@
 Portable OmniVoice Studio-style app for local voice cloning and voice design.
 It is built to be extracted into any folder and launched with one double-click.
 
+## Heads up: old version is no longer supported
+
+I stopped supporting the old version on purpose. The old archives are still
+below in case you need them, but they won't get new fixes or updates.
+
+Also, sorry for not touching the archive for like half a year. I honestly didn't
+think anyone was still using it.
+
+The new version is on newer AI models and has a new UI, so grab that one:
+
+[Google Drive](https://drive.google.com/file/d/1SQafJsKi09tW0hngT9yjLAipxHtSlI10/view?usp=sharing)
+
+[Buzzheavier mirror](https://bzzhr.co/fjoqybq3k029)
+
+Same deal as before: to download the Buzzheavier one through my tools you can
+insert the ID `fjoqybq3k029`. Google Drive is there too in case buzz is being
+annoying again.
+
+## Old Version (no longer supported)
+
 ## Download
 
 Latest release download:
