@@ -11,19 +11,23 @@ below in case you need them, but they won't get new fixes or updates.
 Also, sorry for not touching the archive for like half a year. I honestly didn't
 think anyone was still using it.
 
+The portable version has become heavier, but now it includes yt-dlp and useful
+tools that I ̶s̶t̶o̶l̶e̶ borrowed from another repository.
+
 The new version is on newer AI models and has a new UI, so grab that one:
 
-[Google Drive](https://drive.google.com/file/d/1SQafJsKi09tW0hngT9yjLAipxHtSlI10/view?usp=sharing)
+[Google Drive](https://drive.google.com/file/d/1SQafJsKi09tW0hngT9yjLAipxHtSlI10/view?usp=sharing) Now in the entire archive, not in pieces. 
+
+(It almost filled up my disk...)
 
 [Buzzheavier mirror](https://bzzhr.co/fjoqybq3k029)
 
 Same deal as before: to download the Buzzheavier one through my tools you can
 insert the ID `fjoqybq3k029`. Google Drive is there too in case buzz is being
-annoying again.
+annoying again. I’ll try to optimize the tool so that no more problems arise,
+provided, of course, that my RE skills are sufficient.
 
 ## Old Version (no longer supported)
-
-## Download
 
 Latest release download:
 
