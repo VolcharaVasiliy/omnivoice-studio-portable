@@ -35,7 +35,7 @@ Latest release download:
 
 Thanks to Buzzheavier for free hosting of large files.
 For faster downloads without interruptions or ads, the releases may also
-include [BuzzheavierTool.exe](https://github.com/VolcharaVasiliy/omnivoice-studio-portable/releases/download/BuzzTool_403_fix/BuzzheavierTool.exe) as a companion downloader for Buzzheavier-hosted
+include [BuzzheavierTool.exe](https://github.com/VolcharaVasiliy/buzzheavier-tool/releases/download/v0.2.2/BuzzheavierTool.exe) as a companion downloader for Buzzheavier-hosted
 files. To download through my tools you can insert the ID `efzletm4etyp`.
 
 As for my download script, If the download hasn't started and you see resolving, then don't worry, buzz just doesn't have an API download, but it's easy to bypass, but it's not very easy to bypass clogflare's protection.
