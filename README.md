@@ -20,10 +20,10 @@ The new version is on newer AI models and has a new UI, so grab that one:
 
 (It almost filled up my disk...)
 
-[Buzzheavier mirror](https://bzzhr.co/fjoqybq3k029)
+[Buzzheavier mirror](https://fuckingfast.net/z2c6mi1wftq1)
 
 Same deal as before: to download the Buzzheavier one through my tools you can
-insert the ID `fjoqybq3k029`. Google Drive is there too in case buzz is being
+insert the ID `z2c6mi1wftq1`. Google Drive is there too in case buzz is being
 annoying again. I’ll try to optimize the tool so that no more problems arise,
 provided, of course, that my RE skills are sufficient.
 
